@@ -1,12 +1,12 @@
 ## Backblaze B2 for PHP
 
 [![Author](http://img.shields.io/badge/author-@mhetreramesh-blue.svg?style=flat-square)](https://twitter.com/mhetreramesh)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/gliterd/backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/backblaze-b2)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/medoid/backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/medoid/backblaze-b2)
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/gliterd/backblaze-b2/master.svg?style=flat-square)](https://travis-ci.org/gliterd/backblaze-b2)
+[![Build Status](https://img.shields.io/travis/medoid/backblaze-b2/master.svg?style=flat-square)](https://travis-ci.org/medoid/backblaze-b2)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads](https://img.shields.io/packagist/dt/gliterd/backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/gliterd/backblaze-b2)
+[![Total Downloads](https://img.shields.io/packagist/dt/medoid/backblaze-b2.svg?style=flat-square)](https://packagist.org/packages/medoid/backblaze-b2)
 
 `backblaze-b2` is the SDK for working with Backblaze's B2 storage service.
 
@@ -15,7 +15,7 @@
 Via Composer
 
 ``` bash
-$ composer require gliterd/backblaze-b2
+$ composer require medoid/backblaze-b2
 ```
 
 ## Usage
@@ -131,17 +131,17 @@ If you discover any security related issues, please email mhetreramesh@gmail.com
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/gliterd/backblaze-b2.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/medoid/backblaze-b2.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/gliterd/backblaze-b2/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/gliterd/backblaze-b2.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/gliterd/backblaze-b2.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/gliterd/backblaze-b2.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/medoid/backblaze-b2/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/medoid/backblaze-b2.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/medoid/backblaze-b2.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/medoid/backblaze-b2.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/gliterd/backblaze-b2
-[link-travis]: https://travis-ci.org/gliterd/backblaze-b2
-[link-scrutinizer]: https://scrutinizer-ci.com/g/gliterd/backblaze-b2/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/gliterd/backblaze-b2
-[link-downloads]: https://packagist.org/packages/gliterd/backblaze-b2
+[link-packagist]: https://packagist.org/packages/medoid/backblaze-b2
+[link-travis]: https://travis-ci.org/medoid/backblaze-b2
+[link-scrutinizer]: https://scrutinizer-ci.com/g/medoid/backblaze-b2/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/medoid/backblaze-b2
+[link-downloads]: https://packagist.org/packages/medoid/backblaze-b2
 [link-author]: https://github.com/gliterd
 [link-contributors]: ../../contributors
