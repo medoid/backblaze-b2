@@ -11,12 +11,18 @@
             "email": "mhetreramesh@gmail.com",
             "homepage": "https://gliterd.com",
             "role": "Developer"
+        },
+        {
+            "name": "Puleeno Nguyen",
+            "email": "puleeno@gmail.com",
+            "homepage": "https://puleeno.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.2",
         "ext-json": "*",
-        "guzzlehttp/guzzle": "^6.1",
+        "ramphor/guzzle": "*",
         "nesbot/carbon": "2.*"
     },
     "require-dev": {
