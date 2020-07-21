@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.2.5",
         "ext-json": "*",
         "ramphor/guzzle": "*",
         "nesbot/carbon": "2.*"
