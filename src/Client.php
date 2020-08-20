@@ -2,6 +2,7 @@
 
 namespace BackblazeB2;
 
+use BackblazeB2\Exceptions\B2Exception;
 use BackblazeB2\Exceptions\NotFoundException;
 use BackblazeB2\Exceptions\ValidationException;
 use BackblazeB2\Http\Client as HttpClient;
@@ -55,6 +56,8 @@ class Client
      * @param array $options
      *
      * @throws ValidationException
+     * @throws GuzzleException     If the request fails.
+     * @throws B2Exception         If the B2 server replies with an error.
      *
      * @return Bucket
      */
@@ -81,6 +84,8 @@ class Client
      * @param array $options
      *
      * @throws ValidationException
+     * @throws GuzzleException     If the request fails.
+     * @throws B2Exception         If the B2 server replies with an error.
      *
      * @return Bucket
      */
@@ -108,6 +113,9 @@ class Client
     /**
      * Returns a list of bucket objects representing the buckets on the account.
      *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
+     *
      * @return array
      */
     public function listBuckets()
@@ -130,6 +138,9 @@ class Client
      *
      * @param array $options
      *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
+     *
      * @return bool
      */
     public function deleteBucket(array $options)
@@ -150,6 +161,9 @@ class Client
      * Uploads a file to a bucket and returns a File object.
      *
      * @param array $options
+     *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
      *
      * @return File
      */
@@ -260,6 +274,9 @@ class Client
      *
      * @param array $options
      *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
+     *
      * @return array
      */
     public function listFiles(array $options)
@@ -335,6 +352,8 @@ class Client
      *
      * @throws GuzzleException
      * @throws NotFoundException If no file id was provided and BucketName + FileName does not resolve to a file, a NotFoundException is thrown.
+     * @throws GuzzleException   If the request fails.
+     * @throws B2Exception       If the B2 server replies with an error.
      *
      * @return File
      */
@@ -372,6 +391,8 @@ class Client
      *
      * @throws GuzzleException
      * @throws NotFoundException
+     * @throws GuzzleException   If the request fails.
+     * @throws B2Exception       If the B2 server replies with an error.
      *
      * @return bool
      */
@@ -527,6 +548,9 @@ class Client
      * @param $contentType
      * @param $bucketId
      *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
+     *
      * @return mixed
      */
     protected function startLargeFile($fileName, $contentType, $bucketId)
@@ -542,6 +566,9 @@ class Client
      * Gets the url for the next large file part upload.
      *
      * @param $fileId
+     *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
      *
      * @return mixed
      */
@@ -615,6 +642,9 @@ class Client
      * @param       $fileId
      * @param array $sha1s
      *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
+     *
      * @return File
      */
     protected function finishLargeFile($fileId, array $sha1s)
@@ -643,6 +673,9 @@ class Client
      * @param string $method
      * @param string $route
      * @param array  $json
+     *
+     * @throws GuzzleException If the request fails.
+     * @throws B2Exception     If the B2 server replies with an error.
      *
      * @return mixed
      */
