@@ -605,7 +605,6 @@ class Client
         $file_handle = fopen($filePath, 'r');
 
         while ($total_bytes_sent < $local_file_size) {
-
             // Determine the number of bytes to send based on the minimum part size
             if (($local_file_size - $total_bytes_sent) < $minimum_part_size) {
                 $bytes_sent_for_part = ($local_file_size - $total_bytes_sent);
