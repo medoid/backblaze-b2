@@ -5,7 +5,7 @@ namespace BackblazeB2;
 use BackblazeB2\Exceptions\B2Exception;
 use BackblazeB2\Exceptions\NotFoundException;
 use BackblazeB2\Exceptions\ValidationException;
-use BackblazeB2\Http\Client as HttpClient;
+use GuzzleHttp\Client as HttpClient;
 use Carbon\Carbon;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -223,6 +223,7 @@ class Client
             ],
             'body' => $options['Body'],
         ]);
+        $response = json_decode($response->getBody(), true);
 
         return new File(
             $response['fileId'],
@@ -265,6 +266,7 @@ class Client
         $this->authorizeAccount();
 
         $response = $this->client->request('GET', $requestUrl, $requestOptions, false);
+        $response = json_decode($response->getBody(), true);
 
         return isset($options['SaveAs']) ? true : $response;
     }
@@ -430,6 +432,7 @@ class Client
         $response = $this->client->request('GET', self::B2_API_BASE_URL.self::B2_API_V1.'/b2_authorize_account', [
             'auth' => [$this->accountId, $this->applicationKey],
         ]);
+        $response = json_decode($response->getBody(), true);
 
         $this->authToken = $response['authorizationToken'];
         $this->apiUrl = $response['apiUrl'].self::B2_API_V1;
@@ -624,7 +627,7 @@ class Client
                 'body' => $data_part,
             ]);
 
-            $return[] = $response;
+            $return[] = json_decode($response->getBody(), true);
 
             // Prepare for the next iteration of the loop
             $part_no++;
@@ -683,11 +686,13 @@ class Client
     {
         $this->authorizeAccount();
 
-        return $this->client->request($method, $this->apiUrl.$route, [
+        $response = $this->client->request($method, $this->apiUrl.$route, [
             'headers' => [
                 'Authorization' => $this->authToken,
             ],
             'json' => $json,
         ]);
+
+        return json_decode($response->getBody(), true);
     }
 }
